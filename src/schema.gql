@@ -1,0 +1,34 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreateMessageInput {
+  message: String!
+}
+
+input CreateUserInput {
+  id: Int!
+  name: String!
+  status: String
+}
+
+type Message {
+  message: String!
+}
+
+type Mutation {
+  createMessage(createMessageInput: CreateMessageInput!): Message!
+  failMessage(createMessageInput: CreateMessageInput!): Message!
+  registerUser(createUserInput: CreateUserInput!): User!
+  timeoutError(createMessageInput: CreateMessageInput!): Message!
+}
+
+type Query {
+  rootQuery: [Message!]!
+}
+
+type User {
+  id: Int!
+  name: String!
+  status: String
+}
